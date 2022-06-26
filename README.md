@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# StakeMe is a React app to track all your staking rewards acrooss different web3 protocols
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
