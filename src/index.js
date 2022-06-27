@@ -16,9 +16,35 @@ const App = function() {
 // Is it possible to use also this other syntax
 const App = () => {
 
+    return (
+        <div className="UI container comments">
+            
+            <div className="comment">
+                <a href="/" className="avatar">
+                    <img alt="avatar" />
+                </a>
+            </div>
+
+            <div className="content">
+                <a href="/" className="author">
+                    Sam
+                </a>
+            </div>
+
+            <div className="metadata">
+                <span className="date">Today at 6:00PM</span>
+            </div>
+
+            <div className="text">Nice Blog Post</div>
+
+
+        </div>
+    );
+
+
+    /*
     const buttonText = {text: 'Click Me!'};
     const labelText = 'Enter name:';
-
     return (
         <div>
             <label className="label" htmlFor="name">
@@ -30,6 +56,7 @@ const App = () => {
             </button>
         </div>
     );
+    */
 };
 
 // Take the React component and show it on the screen
