@@ -1,9 +1,11 @@
 // Import the React and ReactDOM libraries
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Faker from 'faker';
+import CommentDetail from './CommentDetail';
 
 function getButtonText() {
-    return 'Clcik on me!';
+    return 'Click on me!';
 }
 
 // Create a React component
@@ -18,29 +20,11 @@ const App = () => {
 
     return (
         <div className="UI container comments">
-            
-            <div className="comment">
-                <a href="/" className="avatar">
-                    <img alt="avatar" />
-                </a>
-            </div>
-
-            <div className="content">
-                <a href="/" className="author">
-                    Sam
-                </a>
-            </div>
-
-            <div className="metadata">
-                <span className="date">Today at 6:00PM</span>
-            </div>
-
-            <div className="text">Nice Blog Post</div>
-
-
+            <CommentDetail author="Sam"  content="Wow that's cool! I will go for Finland then!" avatarPicture={Faker.image.image()} timeAgo="Today at 4:59PM" />
+            <CommentDetail author="Alex" content="Why Paris? It is so hot, better Helsinki."    avatarPicture={Faker.image.image()} timeAgo="Today at 2:00AM" />
+            <CommentDetail author="Jane" content="I suggest you to visit Paris this year."      avatarPicture={Faker.image.image()} timeAgo="Yesterday at 5:00PM"  />
         </div>
     );
-
 
     /*
     const buttonText = {text: 'Click Me!'};
