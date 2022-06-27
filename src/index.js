@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Faker from 'faker';
 import CommentDetail from './CommentDetail';
+import ApprovalCard from './ApprovalCard';
 
 function getButtonText() {
     return 'Click on me!';
@@ -20,9 +21,19 @@ const App = () => {
 
     return (
         <div className="UI container comments">
-            <CommentDetail author="Sam"  content="Wow that's cool! I will go for Finland then!" avatarPicture={Faker.image.image()} timeAgo="Today at 4:59PM" />
-            <CommentDetail author="Alex" content="Why Paris? It is so hot, better Helsinki."    avatarPicture={Faker.image.image()} timeAgo="Today at 2:00AM" />
-            <CommentDetail author="Jane" content="I suggest you to visit Paris this year."      avatarPicture={Faker.image.image()} timeAgo="Yesterday at 5:00PM"  />
+        
+            <ApprovalCard>            
+                <CommentDetail author="Sam"  content="Wow that's cool! I will go for Finland then!" avatarPicture={Faker.image.image()} timeAgo="Today at 4:59PM" />
+            </ApprovalCard>
+            
+            <ApprovalCard>
+                <CommentDetail author="Alex" content="Why Paris? It is so hot, better Helsinki."    avatarPicture={Faker.image.image()} timeAgo="Today at 2:00AM" />
+            </ApprovalCard>
+
+            <ApprovalCard>
+                <CommentDetail author="Jane" content="I suggest you to visit Paris this year."      avatarPicture={Faker.image.image()} timeAgo="Yesterday at 5:00PM"  />
+            </ApprovalCard>
+
         </div>
     );
 
